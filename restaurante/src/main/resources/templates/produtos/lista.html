@@ -1,0 +1,32 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cardapio do Restaurante</title>
+</head>
+<body>
+
+<h1>Lista de Pratos Cadastrados</h1>
+
+<table border="1">
+    <tr>
+        <th>Nome do prato</th>
+        <th>Descrição</th>
+        <th>Preço</th>
+        <th>Status</th>
+    </tr>
+    <tr th:each="prato : ${produtos}">
+
+        <td th:text="${prato.name}">Feijoada</td>
+        <td th:text="${prato.description}">Feijoada de porco completa</td>
+        <td th:text="${prato.price}">45</td>
+        <td th:text="${prato.active}">true</td>
+
+    </tr>
+</table>
+
+</body>
+</html>
