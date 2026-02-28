@@ -1,6 +1,5 @@
 package com.waldyr.restaurante.controller;
 
-
 import com.waldyr.restaurante.model.Produto;
 import com.waldyr.restaurante.service.ProdutoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +18,13 @@ public class ProdutoController {
 
     @Autowired
     private ProdutoService service;
+
+    @GetMapping("/editar/{id}")
+    public String editarProduto(@PathVariable Long id, Model model){
+        Produto produtoAchado = service.buscarPorId(id);
+        model.addAttribute("produto", produtoAchado);
+        return "produtos/formulario";
+    }
 
     @GetMapping("/inativar/{id}")
     public String inativarProduto(@PathVariable Long id){

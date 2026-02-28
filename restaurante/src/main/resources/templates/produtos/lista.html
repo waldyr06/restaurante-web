@@ -21,12 +21,14 @@
     </tr>
     <tr th:each="prato : ${produtos}">
 
-        <td th:text="${prato.name}">Feijoada</td>
-        <td th:text="${prato.description}">Feijoada de porco completa</td>
-        <td th:text="${prato.price}">45</td>
-        <td th:text="${prato.active}">true</td>
+        <!--<td th:text="${prato.id}}"></td>-->
+        <td th:text="${prato.name}"></td>
+        <td th:text="${prato.description}"></td>
+        <td th:text="${prato.price}"></td>
+        <td th:text="${prato.active}"></td>
         <td>
         <a th:href="@{/admin/produtos/inativar/{id}(id=${prato.id})}">Inativar Prato</a>
+            <a th:href="@{/admin/produtos/editar/{id}(id=${prato.id})}">Editar</a>
         </td>
 
     </tr>
