@@ -6,6 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="f95960f7-bc92-4e82-ae30-95a987d0fac8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/restaurante/src/main/java/com/waldyr/restaurante/controller/ProdutoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/restaurante/src/main/java/com/waldyr/restaurante/controller/ProdutoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/restaurante/src/main/java/com/waldyr/restaurante/model/Produto.java" beforeDir="false" afterPath="$PROJECT_DIR$/restaurante/src/main/java/com/waldyr/restaurante/model/Produto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/restaurante/src/main/resources/templates/produtos/formulario.html" beforeDir="false" afterPath="$PROJECT_DIR$/restaurante/src/main/resources/templates/produtos/formulario.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/restaurante/src/main/resources/templates/produtos/lista.html" beforeDir="false" afterPath="$PROJECT_DIR$/restaurante/src/main/resources/templates/produtos/lista.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

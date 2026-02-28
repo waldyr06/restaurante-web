@@ -17,6 +17,7 @@
         <th>Descrição</th>
         <th>Preço</th>
         <th>Status</th>
+        <th>Ativar ou Desativar</th>
     </tr>
     <tr th:each="prato : ${produtos}">
 
@@ -24,6 +25,9 @@
         <td th:text="${prato.description}">Feijoada de porco completa</td>
         <td th:text="${prato.price}">45</td>
         <td th:text="${prato.active}">true</td>
+        <td>
+        <a th:href="@{/admin/produtos/inativar/{id}(id=${prato.id})}">Inativar Prato</a>
+        </td>
 
     </tr>
 </table>

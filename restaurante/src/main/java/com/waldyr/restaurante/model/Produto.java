@@ -34,7 +34,6 @@ public class Produto {
     @Column(name = "valores", scale = 2)
     private BigDecimal price;
 
-    @NotBlank
     @Column(name = "imagem")
     private String image;
 

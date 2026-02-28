@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -19,9 +20,15 @@ public class ProdutoController {
     @Autowired
     private ProdutoService service;
 
+    @GetMapping("/inativar/{id}")
+    public String inativarProduto(@PathVariable Long id){
+        service.inativar(id);
+        return "redirect:/admin/produtos/lista";
+    }
+
     @GetMapping("/lista")
     public String listar(Model model){
-        List<Produto> listaDoCardapio = service.listarTodos();
+        List<Produto> listaDoCardapio = service.listarTodos(    );
         model.addAttribute("produtos", listaDoCardapio);
         return "produtos/lista";
     }
