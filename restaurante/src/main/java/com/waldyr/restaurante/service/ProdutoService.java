@@ -21,6 +21,10 @@ public class ProdutoService {
         return produtoRepository.findAll();
     }
 
+    public List<Produto> listarApenasAtivos(){
+        return produtoRepository.findByActiveTrue();
+    }
+
     public void inativarOuAtivar(Long id) {
         Produto produto = produtoRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Produto não encontrado"));

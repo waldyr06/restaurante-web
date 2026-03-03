@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Cardápio - Visão do Cliente</title>
+</head>
+<body>
+<h1>Nosso Cardápio</h1>
+<h2>Escolha seu prato</h2>
+
+<table border="1">
+    <thead>
+    <tr>
+        <th>Prato</th>
+        <th>Descrição</th>
+        <th>Preço</th>
+        <th>Ação</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="item : ${produtos}">
+
+        <td th:text="${item.name}"></td>
+        <td th:text="${item.description}"></td>
+        <td th:text="${item.price}"></td>
+        <td><button>Adicionar</button></td>
+
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

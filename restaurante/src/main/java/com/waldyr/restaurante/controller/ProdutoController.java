@@ -26,7 +26,7 @@ public class ProdutoController {
         return "produtos/formulario";
     }
 
-    @PostMapping("/inativar/{id}")
+    @GetMapping("/inativar/{id}")
     public String inativarProduto(@PathVariable Long id){
         service.inativarOuAtivar(id);
         return "redirect:/admin/produtos/lista";
