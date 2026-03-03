@@ -21,11 +21,12 @@ public class ProdutoService {
         return produtoRepository.findAll();
     }
 
-    public void inativar(Long id) {
-        produtoRepository.findById(id).ifPresent(produto -> {
-            produto.setActive(true);
-            produtoRepository.save(produto);
-        });
+    public void inativarOuAtivar(Long id) {
+        Produto produto = produtoRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Produto não encontrado"));
+
+        produto.setActive(!produto.isActive());
+        produtoRepository.save(produto);
     }
 
     public Produto buscarPorId(Long id){

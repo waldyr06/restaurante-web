@@ -26,9 +26,9 @@ public class ProdutoController {
         return "produtos/formulario";
     }
 
-    @GetMapping("/inativar/{id}")
+    @PostMapping("/inativar/{id}")
     public String inativarProduto(@PathVariable Long id){
-        service.inativar(id);
+        service.inativarOuAtivar(id);
         return "redirect:/admin/produtos/lista";
     }
 
@@ -40,7 +40,8 @@ public class ProdutoController {
     }
 
     @GetMapping("/novo")
-    public String mostrarFormularioNovo(){
+    public String mostrarFormularioNovo(Model model){
+        model.addAttribute("produto", new Produto());
         return "produtos/formulario";
     }
 
@@ -49,4 +50,5 @@ public class ProdutoController {
         service.salvar(produtoPreenchido);
         return "redirect:/admin/produtos/lista";
     }
+
 }
