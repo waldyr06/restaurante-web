@@ -18,12 +18,12 @@
             <i class="bi bi-shop me-2"></i>Dobradinha e Feijoada da Irmã Marcela
         </a>
         <!-- Botão do Carrinho (Ainda não funciona) -->
-        <button class="btn btn-warning position-relative">
+        <a th:href="@{/cardapio/resumo}" class="btn btn-warning position-relative">
             <i class="bi bi-cart-fill"></i> Carrinho
-            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark" th:text="${#lists.size(carrinho)}">
                 0
             </span>
-        </button>
+        </a>
     </div>
 </nav>
 
@@ -59,7 +59,7 @@
 
                 <!-- Rodapé do Cartão com o Botão de Adicionar -->
                 <div class="card-footer bg-white border-top-0 p-3 pt-0">
-                    <a href="#" class="btn btn-outline-danger w-100 fw-bold">
+                    <a th:href="@{/cardapio/adicionar/{id}(id=${item.id})}" class="btn btn-outline-danger w-100 fw-bold">
                         <i class="bi bi-plus-circle me-1"></i> Adicionar ao Pedido
                     </a>
                 </div>

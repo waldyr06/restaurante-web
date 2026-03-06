@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resumo da Comanda - Caixa</title>
+    <!-- CSS Bootstrap e Ícones -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body class="bg-light">
+
+<div class="container mt-5 mb-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+
+            <div class="card shadow border-0">
+                <!-- Cabeçalho Escuro -->
+                <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center py-3">
+                    <h4 class="mb-0"><i class="bi bi-receipt"></i> Resumo da Comanda</h4>
+
+                    <!-- Botão de Voltar ao Cardápio para continuar lançando pratos -->
+                    <a th:href="@{/cardapio/comidas}" class="btn btn-sm btn-outline-light">
+                        <i class="bi bi-arrow-left"></i> Voltar aos Lançamentos
+                    </a>
+                </div>
+
+                <div class="card-body p-0">
+
+                    <!-- MÁGICA 1: Se o carrinho estiver vazio (#lists.isEmpty) -->
+                    <div th:if="${#lists.isEmpty(carrinho)}" class="p-5 text-center text-muted">
+                        <i class="bi bi-cart-x fs-1 mb-3 d-block"></i>
+                        <h5>A comanda desta mesa está vazia</h5>
+                        <p>Volte ao menu e adicione itens para contabilizar.</p>
+                    </div>
+
+                    <!-- MÁGICA 2: A Tabela só aparece se o carrinho NÃO estiver vazio (th:unless) -->
+                    <table th:unless="${#lists.isEmpty(carrinho)}" class="table table-hover align-middle mb-0">
+                        <thead class="table-light">
+                        <tr>
+                            <th class="ps-4">Item Lançado</th>
+                            <th class="text-end pe-4">Valor</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <!-- LOOP THYMELEAF: Cria uma linha (tr) para cada prato na sessão -->
+                        <tr th:each="item : ${carrinho}">
+                            <td class="ps-4">
+                                <span class="fw-bold text-dark" th:text="${item.name}">Nome do Prato</span>
+                                <br>
+                                <small class="text-muted" th:text="${item.description}">Descrição</small>
+                            </td>
+                            <!-- Mostra o preço com R$ na frente -->
+                            <td class="text-end pe-4 text-success fw-bold" th:text="'R$ ' + ${item.price}">
+                                R$ 0.00
+                            </td>
+                        </tr>
+                        </tbody>
+                        <tfoot class="bg-light">
+                        <tr>
+                            <td class="text-end fw-bold fs-5 py-3">TOTAL DA MESA:</td>
+                            <!-- VALOR TOTAL: Variável ${total} calculada lá no Java pelo BigDecimal -->
+                            <td class="text-end fw-bold fs-4 text-danger pe-4 py-3" th:text="'R$ ' + ${total}">
+                                R$ 0.00
+                            </td>
+                        </tr>
+                        </tfoot>
+                    </table>
+                </div>
+
+                <!-- Rodapé com o Botão de Fechar Conta -->
+                <div class="card-footer bg-white p-4 text-end">
+                    <!-- Deixei como link chamando a rota de finalizar (que criaremos a seguir) -->
+                    <a th:href="@{/cardapio/finalizar}" class="btn btn-success btn-lg px-5" th:classappend="${#lists.isEmpty(carrinho)} ? 'disabled' : ''">
+                        <i class="bi bi-check-circle me-2"></i> Finalizar e Limpar Comanda
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
