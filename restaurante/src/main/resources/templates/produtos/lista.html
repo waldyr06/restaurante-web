@@ -32,10 +32,10 @@
         <td th:text="${prato.price}"></td>
         <td th:text="${prato.active}"></td>
         <td>
-        <a th:href="@{/admin/produtos/inativar/{id}(id=${prato.id})}" class="btn btn-danger btn-sm">Inativar Prato</a>
+            <a th:href="@{/admin/produtos/inativar/{id}(id=${prato.id})}" class="btn btn-danger btn-sm">Inativar Prato</a>
         </td>
         <td>
-        <a th:href="@{/admin/produtos/editar/{id}(id=${prato.id})}" class="btn btn-warning btn-sm">Editar</a>
+            <a th:href="@{/admin/produtos/editar/{id}(id=${prato.id})}" class="btn btn-warning btn-sm">Editar</a>
         </td>
         <td>
             <a th:href="@{/admin/produtos/novo}" class="btn btn-primary mb-3>">Novo</a>

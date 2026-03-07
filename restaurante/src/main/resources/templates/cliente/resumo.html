@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resumo da Comanda - Caixa</title>
-    <!-- CSS Bootstrap e Ícones -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
@@ -15,11 +14,11 @@
         <div class="col-md-8">
 
             <div class="card shadow border-0">
-                <!-- Cabeçalho Escuro -->
+                <!-- Cabeçalho-->
                 <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center py-3">
                     <h4 class="mb-0"><i class="bi bi-receipt"></i> Resumo da Comanda</h4>
 
-                    <!-- Botão de Voltar ao Cardápio para continuar lançando pratos -->
+                    <!-- Botão de Voltar ao Cardápio -->
                     <a th:href="@{/cardapio/comidas}" class="btn btn-sm btn-outline-light">
                         <i class="bi bi-arrow-left"></i> Voltar aos Lançamentos
                     </a>
@@ -27,14 +26,14 @@
 
                 <div class="card-body p-0">
 
-                    <!-- MÁGICA 1: Se o carrinho estiver vazio (#lists.isEmpty) -->
+                    <!-- Se o carrinho estiver vazio (#lists.isEmpty) -->
                     <div th:if="${#lists.isEmpty(carrinho)}" class="p-5 text-center text-muted">
                         <i class="bi bi-cart-x fs-1 mb-3 d-block"></i>
                         <h5>A comanda desta mesa está vazia</h5>
                         <p>Volte ao menu e adicione itens para contabilizar.</p>
                     </div>
 
-                    <!-- MÁGICA 2: A Tabela só aparece se o carrinho NÃO estiver vazio (th:unless) -->
+                    <!-- A Tabela só aparece se o carrinho NÃO estiver vazio (th:unless) -->
                     <table th:unless="${#lists.isEmpty(carrinho)}" class="table table-hover align-middle mb-0">
                         <thead class="table-light">
                         <tr>
@@ -59,7 +58,7 @@
                         <tfoot class="bg-light">
                         <tr>
                             <td class="text-end fw-bold fs-5 py-3">TOTAL DA MESA:</td>
-                            <!-- VALOR TOTAL: Variável ${total} calculada lá no Java pelo BigDecimal -->
+                            <!-- VALOR TOTAL -->
                             <td class="text-end fw-bold fs-4 text-danger pe-4 py-3" th:text="'R$ ' + ${total}">
                                 R$ 0.00
                             </td>
@@ -70,7 +69,7 @@
 
                 <!-- Rodapé com o Botão de Fechar Conta -->
                 <div class="card-footer bg-white p-4 text-end">
-                    <!-- Deixei como link chamando a rota de finalizar (que criaremos a seguir) -->
+                    <!-- Botão que faz voltar para o cardápio -->
                     <a th:href="@{/cardapio/finalizar}" class="btn btn-success btn-lg px-5" th:classappend="${#lists.isEmpty(carrinho)} ? 'disabled' : ''">
                         <i class="bi bi-check-circle me-2"></i> Finalizar e Limpar Comanda
                     </a>

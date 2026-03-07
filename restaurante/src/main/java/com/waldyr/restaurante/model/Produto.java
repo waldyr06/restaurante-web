@@ -10,18 +10,18 @@ import lombok.NonNull;
 
 import java.math.BigDecimal;
 
-@Entity
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
+@Entity //Criando banco de dados
+@Data //Getters e Setters
+@NoArgsConstructor //Construtor vazio
+@AllArgsConstructor //Construtor preenchido
 public class Produto {
 
-    @Id
+    @Id //Chave primária
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotBlank
-    //length = tamanho da string. unique = não tá repetindo nomes. updatable = não pode alterar
+    @NotBlank //Não pode ser vazio
+    //length = tamanho da string. unique = não tá repetindo nomes.
     @Column(name = "comida", length = 50, unique = true)
     private String name;
 
@@ -30,9 +30,9 @@ public class Produto {
     private String description;
 
     @NonNull
-    @Min(value = 0)
+    @Min(value = 0) //Definindo um valor mínimo
     @Column(name = "valores", scale = 2)
-    private BigDecimal price;
+    private BigDecimal price; //Bigdecimal para termos precisão nas contas
 
     @Column(name = "imagem")
     private String image;
