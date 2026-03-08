@@ -7,12 +7,15 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+//Regras de negócio
+
 @Service
 public class ProdutoService {
 
     @Autowired
     private ProdutoRepository produtoRepository;
 
+    //Serve tanto para salvar um novo como para atualizar algo que já existe
     public Produto salvar(Produto produto) {
         return produtoRepository.save(produto);
     }

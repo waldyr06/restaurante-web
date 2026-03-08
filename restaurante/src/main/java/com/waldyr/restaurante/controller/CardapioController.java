@@ -11,12 +11,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.math.BigDecimal;
 
-@Controller
-@RequestMapping("/cardapio")
-@SessionAttributes("carrinho")
+@Controller //Indicando que vai receber requisições HTTP
+@RequestMapping("/admin/cardapio") //Definindo o prefixo da URL para todas as rotas daqui
+@SessionAttributes("carrinho") //Se alguma coisa tem a etiqueta "carrinho", guarde na memória
 public class CardapioController {
 
-    @Autowired
+    @Autowired //Injetando o ProdutoService
     private ProdutoService service;
 
     @GetMapping("/comidas")
@@ -38,7 +38,7 @@ public class CardapioController {
     {
         Produto pratoEscolhido = service.buscarPorId(id);
         carrinho.add(pratoEscolhido);
-        return "redirect:/cardapio/comidas";
+        return "redirect:/admin/cardapio/comidas";
     }
 
     @GetMapping("/resumo")
@@ -63,6 +63,6 @@ public class CardapioController {
     ){
         carrinho.clear();
 
-        return "redirect:/cardapio/comidas";
+        return "redirect:/admin/cardapio/comidas";
     }
 }
