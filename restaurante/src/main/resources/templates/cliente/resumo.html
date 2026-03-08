@@ -19,7 +19,7 @@
                     <h4 class="mb-0"><i class="bi bi-receipt"></i> Resumo da Comanda</h4>
 
                     <!-- Botão de Voltar ao Cardápio -->
-                    <a th:href="@{/cardapio/comidas}" class="btn btn-sm btn-outline-light">
+                    <a th:href="@{/admin/cardapio/comidas}" class="btn btn-sm btn-outline-light">
                         <i class="bi bi-arrow-left"></i> Voltar aos Lançamentos
                     </a>
                 </div>
@@ -70,7 +70,7 @@
                 <!-- Rodapé com o Botão de Fechar Conta -->
                 <div class="card-footer bg-white p-4 text-end">
                     <!-- Botão que faz voltar para o cardápio -->
-                    <a th:href="@{/cardapio/finalizar}" class="btn btn-success btn-lg px-5" th:classappend="${#lists.isEmpty(carrinho)} ? 'disabled' : ''">
+                    <a th:href="@{/admin/cardapio/finalizar}" class="btn btn-success btn-lg px-5" th:classappend="${#lists.isEmpty(carrinho)} ? 'disabled' : ''">
                         <i class="bi bi-check-circle me-2"></i> Finalizar e Limpar Comanda
                     </a>
                 </div>
