@@ -8,6 +8,6 @@ public class HomeController {
 
     @GetMapping("/")
     public String redirecionarParaCardapio() {
-        return "redirect:/cardapio/comidas";
+        return "redirect:/admin/cardapio/comidas";
     }
 }
