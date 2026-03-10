@@ -5,9 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f95960f7-bc92-4e82-ae30-95a987d0fac8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/assets/tela_da_comanda.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/tela_da_lista.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/tela_do_cardapio.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/tela_do_formulario.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/restaurante/src/main/java/com/waldyr/restaurante/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/restaurante/src/main/java/com/waldyr/restaurante/controller/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/restaurante/src/main/resources/templates/produtos/lista.html" beforeDir="false" afterPath="$PROJECT_DIR$/restaurante/src/main/resources/templates/produtos/lista.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,25 +55,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.RestauranteApplication.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/waldy/OneDrive/Área de Trabalho/Faculdade/programacao_orientada_objeto/restaurante-web&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.annotationProcessors&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.RestauranteApplication.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/waldy/OneDrive/Área de Trabalho/Faculdade/programacao_orientada_objeto/restaurante-web/assets",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\waldy\OneDrive\Área de Trabalho\Faculdade\programacao_orientada_objeto\restaurante-web\assets" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\waldy\OneDrive\Área de Trabalho\Faculdade\programacao_orientada_objeto\restaurante-web" />
       <recent name="C:\Users\waldy\OneDrive\Área de Trabalho\Faculdade\programacao_orientada_objeto\restaurante-web\restaurante\src\main\java\com\waldyr\restaurante" />
       <recent name="C:\Users\waldy\OneDrive\Área de Trabalho\Faculdade\programacao_orientada_objeto\restaurante-web\restaurante\src\main\java\com\restaurante" />
       <recent name="C:\Users\waldy\OneDrive\Área de Trabalho\Faculdade\programacao_orientada_objeto\restaurante-web\restaurante\src\main\java\com" />

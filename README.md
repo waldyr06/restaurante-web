@@ -14,9 +14,9 @@ O projeto está hospedado gratuitamente no **Render** utilizando **contentores D
 
 Sinta-se à vontade para testar:
 
-- 🛒 **Formulario para criar um prato novo**
-- 👨‍🍳 **Cardápio (Pratos que estão ativos)**
-- 📜 **Lista com todos os pratos**
+- 🛒 **[Formulario para criar um prato novo](https://pdv-restaurante.onrender.com/admin/produtos/novo)**
+- 👨‍🍳 **[Cardápio Pratos que estão ativos](https://pdv-restaurante.onrender.com/admin/cardapio/comidas)**
+- 📜 **[Lista com todos os pratos](https://pdv-restaurante.onrender.com/admin/produtos/lista)**
 
 ⚠️ **Aviso de Infraestrutura**
 
@@ -92,5 +92,9 @@ Este projeto foi construído seguindo o padrão **MVC (Model-View-Controller)**,
 - [x] **Soft Delete (Inativação)**  
   Produtos não são excluídos da base de dados, apenas marcados como **inativos (`status = false`)**, protegendo o histórico de vendas.
 
-- [x] **Validações de Domínio**  
-  Uso de anotações Jakarta:
+# 🌅 Imagens
+
+![Tela do formulário](assets/tela_do_formulario.png)
+![tela_da_comanda.png](assets/tela_da_comanda.png)
+![tela_do_cardapio.png](assets/tela_do_cardapio.png)
+![tela_da_lista.png](assets/tela_da_lista.png)
